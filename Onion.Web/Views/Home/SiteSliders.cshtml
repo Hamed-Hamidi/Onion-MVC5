@@ -1,0 +1,27 @@
+﻿@using Onion.Web.Utilities.ImageTools
+@model IEnumerable<Onion.Data.Site.Slider>
+
+<div class="banner-section">
+    <div class="banner">
+        <div class="callbacks_container">
+            <ul class="rslides callbacks callbacks1" id="slider4">
+                @foreach (var slider in Model)
+                {
+                    <li>
+                        <div class="banner-img"><img src="@(ImagePath.SliderOriginalPath+slider.ImageName)" class="img-responsive" alt="" /></div>
+
+                        <div class="banner-info">
+                            <h3>@slider.Title</h3>
+
+                            <p>
+                                @slider.Description
+                            </p>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>

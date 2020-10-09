@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link href="/Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Content/css/icon-font.css" type="text/css" />
+    <link href="/Content/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body class="sticky-header left-side-collapsed">
+    <section>
+        @Html.Partial("_LeftMenu")
+
+        <div class="main-content">
+            @Html.Partial("_HeaderSection")
+            <div class="clearfix"></div>
+            @RenderBody()
+
+            @RenderSection("Footerslider", false)
+        </div>
+
+        <div class="clearfix"></div>
+
+        @Html.Partial("_Footer")
+    </section>
+    <script src="/Content/js/jquery-2.1.4.js"></script>
+    <script src="/Content/js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Content/js/jquery.flexisel.js"></script>
+    <script src="/Content/js/responsiveslides.min.js"></script>
+    <script src="/Content/js/classie.js"></script>
+    <script src="/Content/js/uisearch.js"></script>
+    <script src="/Content/js/jquery.nicescroll.js"></script>
+    <script src="/Content/js/scripts.js"></script>
+    <script src="/Content/js/bootstrap.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>
